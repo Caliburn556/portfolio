@@ -1,21 +1,145 @@
-body {
+/* Global Styles */
+* {
     margin: 0;
-    padding: auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fc;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.btn-hire {
+    background-color: #6c63ff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-hire:hover {
+    background-color: #5a56d4;
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(to right, #6c63ff, #3f3dff);
+    color: white;
+    padding: 100px 0;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-content {
+    max-width: 600px;
+}
+
+.text-content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.text-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.download-cv {
+    background-color: #ff6584;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.download-cv:hover {
+    background-color: #e64a6d;
+}
+
+.image-content {
+    max-width: 400px;
+}
+
+.hero-img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
     text-align: center;
-
+    padding: 30px 0;
 }
 
-h1{
-    padding-top: 2em;
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
 }
 
-p{
-    margin: 2em;
+.social-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
 }
 
-img{
-width: 20em;
-height: 40em;
-max-width: 90%;
-max-height: 90%;
+.social-links li a:hover {
+    color: #ff6584;
 }

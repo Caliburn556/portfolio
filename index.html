@@ -1,12 +1,257 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>My portfolio</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <h1>Hello World</h1>
-        <p> My name is Isaac :) </p>
-        <img src="assets/images/me.jpg" alt="profile pic">
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Isaac Kipruto's Portfolio as a Software Developer and Network Engineer">
+    <title>Isaac Kipruto's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            overflow-x: hidden;
+        }
+        h1, h2, h3 {
+            font-weight: 600;
+        }
+        .btn {
+            border-radius: 25px; /* Rounded buttons */
+            padding: 10px 20px; /* Increased padding for buttons */
+            font-weight: bold; /* Bold text for buttons */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+        }
+        .btn-primary, .btn-danger {
+            background: linear-gradient(135deg, #6c63ff, #b78cff);
+            border: none;
+            color: white; /* White text for buttons */
+        }
+        .btn-primary:hover, .btn-danger:hover {
+            background: linear-gradient(135deg, #b78cff, #6c63ff);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px); /* Slight lift on hover */
+        }
+        .nav-link {
+            color: #555;
+            font-weight: 500;
+            margin-right: 20px;
+        }
+        .nav-link:hover {
+            color: #6c63ff;
+        }
+        .hero-section {
+            background: linear-gradient(to right, #6c63ff, #b78cff);
+            color: white;
+            padding: 100px 0;
+            animation: fadeIn 2s ease-out;
+        }
+        .hero-content h1 {
+            font-size: 3rem;
+            line-height: 1.2;
+        }
+        .hero-img {
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            animation: zoomIn 1.5s ease-out;
+        }
+        .services-list .card {
+            background-color: white;
+            border: none;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            animation: slideUp 1.5s ease-out;
+        }
+        .services-list .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        .skills-list {
+            font-size: 1.1rem;
+        }
+        .contact-section {
+            background-color: #f1f3f5;
+            padding: 60px 0;
+            animation: fadeIn 2s ease-out;
+        }
+        .social-links a {
+            color: #6c63ff;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: #b78cff;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+        }
+        footer a {
+            color: #b78cff;
+        }
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.9);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-light py-3 shadow-sm">
+        <div class="container d-flex justify-content-between align-items-center">
+            <h3 class="m-0">Isaac Kipruto</h3>
+            <a href="mailto:Isaac.kipruto@strathmore.edu" class="nav-link">Isaac.kipruto@strathmore.edu</a>
+            <nav>
+                <ul class="nav">
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="btn btn-primary" href="#contact">Hire me!</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <div class="container d-flex flex-column flex-md-row align-items-center justify-content-between">
+            <div class="text-content">
+                <h1>I am Isaac Kipruto</h1>
+                <h2 class="fs-2 mb-4">Software Developer + Network Engineer</h2>
+                <p class="lead">I break down complex  problems to create integrity focused solutions that  generate effective, sustainable solutions that lead to improvement and growth</p>
+                <a href="assets/CV-Isaac Kipruto-2024.pdf" class="btn btn-danger btn-lg" download>Download CV</a>
+            </div>
+            <div class="image-content mt-4 mt-md-0">
+                <img src="assets/images/me.jpg" alt="Isaac Kipruto" class="img-fluid rounded hero-img" style="max-width: 300px;">
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-5">
+        <div class="container">
+            <h2 class="mb-4 text-center">What I Do</h2>
+            <div class="row services-list">
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Network Engineering</h5>
+                            <p class="card-text">2+ years experience managing Linux OS, Email & DNS Servers.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Software Development</h5>
+                            <p class="card-text">Kotlin, Python, PHP, Web applications, and Android development.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title">Cybersecurity</h5>
+                            <p class="card-text">Ethical hacking, penetration tests, and systems security.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-4 text-center">Projects</h2>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <a href="project1.html" target="_blank">Android app development</a>
+                    <p class="mb-0">I develop mobile apps using Kotlin programming language and Jetpack compose UI kit. </p>
+                </li>
+                <li class="list-group-item">
+                    <a href="project2.html" target="_blank">Cybersecurity & Ethical hacking</a>
+                    <p class="mb-0">
+                        Explore my Ethical Hacking Tools & Labs section, showcasing the security tools I've used and the hands-on labs I've completed to enhance my skills in cybersecurity.</p>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://github.com/yourusername/project3" target="_blank">Internet programming</a>
+                    <p class="mb-0">Description of project 3.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="mb-4 text-center">Skills</h2>
+            <ul class="list-group skills-list">
+                <li class="list-group-item">Server Configuration (Linux OS: Debian, Ubuntu, Kali)</li>
+                <li class="list-group-item">Web Applications & Databases</li>
+                <li class="list-group-item">Android Development with Kotlin</li>
+                <li class="list-group-item">Python, PHP</li>
+                <li class="list-group-item">Cybersecurity & Ethical Hacking</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="education" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-4 text-center">Education</h2>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <h5 class="mb-1">Strathmore University</h5>
+                    <p class="mb-0">Bachelor of Science in Computer Networks and Cyber Security (2022 - 2026)</p>
+                </li>
+                <li class="list-group-item">
+                    <h5 class="mb-1">Sacho High School</h5>
+                    <p class="mb-0">KCSE Grade B (2018 - 2022)</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container text-center">
+            <h2>Contact Me</h2>
+            <p>Email: <a href="mailto:Isaac.kipruto@strathmore.edu">Isaac.kipruto@strathmore.edu</a></p>
+            <p>Phone: 0714382594</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/isaac-kipruto-331849329" target="_blank">Isaac Kipruto</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container text-center">
+            <ul class="social-links list-inline">
+                <li class="list-inline-item"><a href="https://www.linkedin.com/in/isaac-kipruto-331849329" target="_blank"><i class="bi bi-linkedin"></i></a></li>
+                <li class="list-inline-item"><a href="https://github.com" target="_blank"><i class="bi bi-github"></i></a></li>
+            </ul>
+            <p>&copy; 2024 Isaac Kipruto. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

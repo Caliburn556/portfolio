@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethical Hacking Tools & Labs - Isaac Kipruto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .screenshot {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .tool-card {
+            border: 1px solid #e3e3e3;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .tool-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .tool-description {
+            flex: 1;
+        }
+        .screenshot-container {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .screenshot {
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-light py-3 shadow-sm">
+        <div class="container">
+            <h1 class="m-0">Ethical Hacking Tools & Labs</h1>
+            <a href="index.html" class="btn btn-primary back-button">Back to Portfolio</a>
+        </div>
+    </header>
+
+    <div class="container my-5">
+        <h2 class="mb-4">Project Overview</h2>
+        <p>This project showcases the security tools I have used and the ethical hacking labs I have completed, focusing on vulnerability assessments, penetration testing, and exploitation techniques.</p>
+
+        <h3 class="mt-4">Phases of Ethical Hacking</h3>
+        <p>The tools used in each phase of ethical hacking:</p>
+        <ul>
+            <li><strong>Reconnaissance:</strong> SHODAN, NMAP</li>
+            <li><strong>Scanning:</strong> Nessus, NMAP</li>
+            <li><strong>Gaining Access:</strong> SQL injection, Metasploit, Zphisher</li>
+            <li><strong>Maintaining Access:</strong> Mimikatz</li>
+            <li><strong>Covering Tracks:</strong> Ettercap, MD5 Collision</li>
+        </ul>
+
+        <h3 class="mt-4">Tools and Labs Used</h3>
+
+        <!-- Nessus Tool with Screenshot -->
+        <div class="tool-row">
+            <div class="tool-description">
+                <h4>Nessus</h4>
+                <p>Nessus is a vulnerability scanning tool used to identify security holes in software, systems, and networks. It's especially helpful in scanning for configuration errors, default passwords, and missing patches. Nessus is widely used during the <strong>scanning phase</strong> of ethical hacking to uncover weaknesses that can be exploited.</p>
+            </div>
+            <div class="screenshot-container">
+                <img src="assets/images/nessus lab.png" alt="Screenshot of Nessus" class="screenshot" data-bs-toggle="modal" data-bs-target="#screenshotModal1">
+            </div>
+        </div>
+
+        <!-- SHODAN Tool with Screenshot -->
+        <div class="tool-row">
+            <div class="tool-description">
+                <h4>SHODAN</h4>
+                <p>SHODAN is a search engine for Internet-connected devices. It helps ethical hackers in the <strong>reconnaissance phase</strong> by providing information about exposed devices such as webcams, routers, and servers, making it an excellent tool for network discovery.</p>
+            </div>
+            <div class="screenshot-container">
+                <img src="assets/images/SHODAN.png" alt="Screenshot of SHODAN" class="screenshot" data-bs-toggle="modal" data-bs-target="#screenshotModal2">
+            </div>
+        </div>
+
+        <!-- NMAP Tool with Screenshot -->
+        <div class="tool-row">
+            <div class="tool-description">
+                <h4>NMAP</h4>
+                <p>NMAP (Network Mapper) is a network discovery and security auditing tool. It is used during both the <strong>reconnaissance</strong> and <strong>scanning phases</strong> of ethical hacking to map out networks, identify active hosts, and find open ports. It's a critical tool in discovering potential vulnerabilities in the network.</p>
+            </div>
+            <div class="screenshot-container">
+                <img src="assets/images/NMAP.png" alt="Screenshot of NMAP" class="screenshot" data-bs-toggle="modal" data-bs-target="#screenshotModal3">
+            </div>
+        </div>
+
+        <!-- Zphisher Tool with Screenshot -->
+        <div class="tool-row">
+            <div class="tool-description">
+                <h4>Zphisher</h4>
+                <p>Zphisher is a social engineering tool used to create phishing websites that look similar to popular websites (such as Facebook or Google) to trick users into giving up their credentials. This tool is particularly useful in the <strong>gaining access phase</strong> by simulating phishing attacks.</p>
+            </div>
+            <div class="screenshot-container">
+                <img src="assets/images/ZPHISHER.png" alt="Screenshot of Zphisher" class="screenshot" data-bs-toggle="modal" data-bs-target="#screenshotModal4">
+            </div>
+        </div>
+
+        <!-- Other Tools without Screenshots -->
+        <div class="tool-card">
+            <h4>Metasploit</h4>
+            <p>Metasploit is an exploitation framework used to find, exploit, and validate vulnerabilities. It is often used in the <strong>gaining access phase</strong> to exploit system weaknesses and test for security vulnerabilities.</p>
+        </div>
+
+        <div class="tool-card">
+            <h4>SQL Injection</h4>
+            <p>SQL injection is a technique used to attack data-driven applications by inserting malicious SQL queries. It is used to bypass authentication mechanisms and extract sensitive data from databases, and is part of the <strong>gaining access phase</strong>.</p>
+        </div>
+
+        <div class="tool-card">
+            <h4>Mimikatz</h4>
+            <p>Mimikatz is a post-exploitation tool used to extract plaintext passwords, PINs, and Kerberos tickets from memory. It is commonly used in the <strong>maintaining access phase</strong> to gain persistent control over a compromised system.</p>
+        </div>
+
+        <div class="tool-card">
+            <h4>Ettercap</h4>
+            <p>Ettercap is a tool used to perform Man-in-the-Middle (MITM) attacks. It allows hackers to intercept, capture, and manipulate data traveling between two systems, often used in the <strong>covering tracks phase</strong> after gaining access to the network.</p>
+        </div>
+
+        <h3 class="mt-4">Labs Completed</h3>
+        <ul>
+            <li><strong>CTF Mr. Robot:</strong> Capture the Flag lab based on the Mr. Robot TV series, focusing on multiple hacking techniques.</li>
+            <li><strong>Zphisher:</strong> Social engineering and phishing tool used to simulate phishing attacks.</li>
+            <li><strong>SQL Injection Labs:</strong> Focused on identifying and exploiting SQL vulnerabilities in web applications.</li>
+            <li><strong>Maltego:</strong> A data mining and OSINT (Open-Source Intelligence) tool used to map relationships between people, groups, and organizations.</li>
+        </ul>
+
+
+        <p>I am continuously practicing using new tools and software in the field of cybersecurity.</p>
+        <p>You can view the full repository of labs and projects on my <a href="https://github.com/Caliburn556/Cybersecurity-labs.git" target="_blank">GitHub Repository</a>.</p>
+    </div>
+
+    <!-- Screenshot Modals -->
+    <div class="modal fade" id="screenshotModal1" tabindex="-1" aria-labelledby="screenshotModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="assets/images/nessus lab.png" alt="Screenshot of Nessus" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="screenshotModal2" tabindex="-1" aria-labelledby="screenshotModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="assets/images/SHODAN.png" alt="Screenshot of SHODAN" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="screenshotModal3" tabindex="-1" aria-labelledby="screenshotModal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="assets/images/NMAP.png" alt="Screenshot of NMAP" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="screenshotModal4" tabindex="-1" aria-labelledby="screenshotModal4Label" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="assets/images/ZPHISHER.png" alt="Screenshot of Zphisher" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="bg-dark text-light py-3">
+        <div class="container text-center">
+            <p>&copy; 2024 Isaac Kipruto. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
