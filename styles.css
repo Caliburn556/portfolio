@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: auto;
+    text-align: center;
+
+}
+
+h1{
+    padding-top: 2em;
+}
+
+p{
+    margin: 2em;
+}
+
+img{
+width: 20em;
+height: 40em;
+max-width: 90%;
+max-height: 90%;
+}
